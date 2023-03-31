@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .selected-data {
+            color: #4d0099;
+        }
+        .prediction {
+            color:#4d0099;
+        }
+        .label{
+            color:red;
+        }
+        .vector{
+            color:#ff6666;
+        }
+        p.darken {
+            color: #333;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<p> Classified data using pre_trained SVC model and the predicted(Article_Types) output is:<span class="label"> {{ result[3]
+    }}</span></p>
+
+<p class="darken">Selected raw data:<span class="selected-data">{{ result[0] }}</span></p>
+<p class="darken">Pre_processed data: <span class="prediction">{{ result[1] }}</span></p>
+<p> <span class="vector"> Vectorized and encode data using SentenceBERT:</span> {{ result[2] }}</p>
+
+
+</body>
+</html>
